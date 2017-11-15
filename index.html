@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+    <meta http-equiv=content-type content="text/html; charset=utf-8"><script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+   
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3&sensor=false&language=en"> </script>
+    <script type="text/javascript"
+    src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobox/src/infobox.js"> </script>
+    <script type="text/javascript"
+    src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/infobox/src/infobox_packed.js"> </script>
+    <script type="text/javascript">
+
+    var pokotilovkaList = [['pin1', 49.9097819,36.1778712, 1],
+					['pin2', 49.9124819,36.1731712, 2],
+					['pin3', 49.9071819,36.1725712, 3]
+				    ];
+   
+    var demoCenter = new google.maps.LatLng(0,0);
+    var boxList =[];
+
+    function initialize() {
+        var latlng = new google.maps.LatLng(49.9097819,36.1725712);
+        map = new google.maps.Map(document.getElementById('map_canvas'), {
+            zoom: 15,
+            center: latlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
+
+        addMarkers();
+    }
+
+    function addMarkers(){
+        var pin1Image = new google.maps.MarkerImage('css/images/pin_main.png',
+          new google.maps.Size(31,39),
+          new google.maps.Point(0,0),
+          new google.maps.Point(0,0)
+        );
+
+        var pin2Image = new google.maps.MarkerImage('css/images/pin_slave.png',
+          new google.maps.Size(31,39),
+          new google.maps.Point(0,0),
+          new google.maps.Point(0,0)
+        );
+
+        for (var i = 0; i < pokotilovkaList.length; i++)
+        {
+            marker = new google.maps.Marker({
+                position: new google.maps.LatLng(pokotilovkaList[i][1], pokotilovkaList[i][2], pokotilovkaList[i][3]),
+                map: map,
+                icon: pin1Image,
+                id: i,
+                title: pokotilovkaList[i][0]
+            });         
+
+            var boxText = document.createElement("div");
+            boxText.id = i;
+            boxText.style.cssText = "color: #f6f6f6";
+            boxText.innerHTML = '<div id="content">'+
+          '<div id="siteNotice">'+
+          '</div>'+
+          '<h1 id="firstHeading" class="firstHeading">Company.com</h1>'+
+          '<div id="bodyContent">'+
+          '<p>xyz Street London</p>'+
+          '<p>UK 13214</p>'+
+          '</div>'+
+          '</div>';
+
+            var myOptions = {
+                content: boxText
+                ,disableAutoPan: false
+                ,maxWidth: 0
+                ,pixelOffset: new google.maps.Size(0, 0)
+                ,zIndex: null
+                ,boxStyle: {
+                    background: "url('css/images/map_pop_up.png') no-repeat",
+                    opacity: 1,
+                    width: "171px",
+                    height: "84px",
+                    margin: "-90px 0px 0px -10px"
+                }
+                ,closeBoxURL: "http://www.google.com/intl/en_us/mapfiles/close.gif"
+                ,infoBoxClearance: new google.maps.Size(1, 1)
+                ,isHidden: false
+                ,pane: "floatPane"
+                ,enableEventPropagation: false
+            };
+
+            var ib = new InfoBox(myOptions);
+            boxList.push(ib);
+
+            google.maps.event.addListener(marker,'click',(function(marker, i) {
+                return function() {
+                    boxList[i].open(map, this);
+                    marker.setIcon(pin2Image);
+                }
+            })(marker, i));
+
+        } 
+    } 
+
+		</script>
+	</head>
+		<body onload="initialize()">
+		    <div class="all_block">
+		    	<div class="header">
+		    		<div class="logo">logo</div>
+		    		<ul>
+		    			<li>label</li>
+		    			<li>label</li>
+		    			<li>label</li>
+		    			<li id="sigh_in"><a href="">sigh in</a></li>
+		    		</ul>
+		    	</div>
+				<div class="main_block">
+					<div class="our_mission">
+						<h1><i class="fa fa-star" aria-hidden="true"></i>Our Mission<i class="fa fa-star" aria-hidden="true"></i></h1>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500.</p>
+					</div>
+					<div class="about">
+						<h1>About</h1>
+						<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown.</p>
+					</div>
+					<div class="team">
+						<h1>Team</h1>
+						<ul>
+							<li><div class="foto1"></div>John Doe <p>Founder & CEO</p></li>
+							<li><div class="foto2"></div>John Doe <p>Co- Founder</p></li>
+							<li><div class="foto3"></div>John Doe <p>Investor</p></li>
+						</ul>
+						<a href="">work with us</a>
+					</div>
+					<div id="map_canvas"></div>
+				</div>						
+				<div class="footer">
+                    <div class="footer_content">
+                        <ul>
+                            <li><a href="">about</a></li>
+                            <li><a href="">faq</a></li>
+                            <li><a href="">work with us</a></li> 
+                        </ul>
+                        <div class="link_twitter"><a href=""></a></div>
+                        <div class="link_facebook"><a href=""></a></div>
+                        <div class="link_mail"><a href=""></a></div>
+                        <hr size="1"/>
+                        
+                        </div>
+                        <div class="additional_info">
+                            <h6>© Company.LLC 2014</h6><h6>|</h6>
+                            <a href="">Terms and Conditions</a><h6>|</h6>
+                            <a href="">Privacy Policy</a>
+					</div>
+
+                        
+				</div>
+			</div>
+ 		</body>
+</html>
