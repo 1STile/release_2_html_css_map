@@ -3,6 +3,8 @@
   <head>
   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
     <link href="css/style.css" type="text/css" rel="stylesheet" />
+	<link href="css/reset.css" type="text/css" rel="stylesheet" />
+	<link href="fonts/stylesheet.css" type="text/css" rel="stylesheet" />
     <meta http-equiv=content-type content="text/html; charset=utf-8"><script type="text/javascript" src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
    
     <script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3&sensor=false&language=en"> </script>
@@ -69,7 +71,7 @@
 
             var myOptions = {
                 content: boxText
-                ,disableAutoPan: false
+                ,disableAutoPan: true
                 ,maxWidth: 0
                 ,pixelOffset: new google.maps.Size(0, 0)
                 ,zIndex: null
@@ -105,7 +107,7 @@
 		<body onload="initialize()">
 		    <div class="all_block">
 		    	<div class="header">
-		    		<div class="logo">logo</div>
+		    		<a href="#" class="logo">logo</a>
 		    		<ul>
 		    			<li>label</li>
 		    			<li>label</li>

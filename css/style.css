@@ -1,377 +1,390 @@
-@font-face {
-  font-family: Avenir-85-Heavy;
-  src: url('fonts/Avenir-85-Heavy-Heavy.ttf');
-}
-@font-face {
-  font-family: Avenir-medium;
-  src: url('fonts/Avenir-85-Heavy-Heavy.ttf');
-}
-@font-face {
-  font-family: Avenir-Oblique;
-  src: url('fonts/Avenir-85-Heavy-Heavy.ttf');
-}
-@font-face {
-  font-family: Museo_Sans_500;
-  src: url('fonts/museosans-500.otf');
-}
-@font-face {
-  font-family: Museo_Sans_700;
-  src: url('fonts/Museo Sans Cyrl 700.ttf');
-}
-@font-face {
-  font-family: Museo_Sans_900;
-  src: url('fonts/Museo Sans Cyrl 900.ttf');
-}
-@font-face {
-  font-family: ProximaNova-Bold;
-  src: url('fonts/ProximaNova-Bold.ttf');
-}
-@font-face {
-  font-family: ProximaNova-Bold
-  src: url('fonts/proximanova-semibold.otf');
-}
-html {
-  min-width: 1440px;
-}
-body {
-  width: auto;
-  height: auto;
-}
 .all_block {
-  width: 1440px;
-  height: auto;
-  margin: 0 auto;
+    margin: 0 auto;
+    max-width: 1440px;
 }
+
 .header {
-  background: #f7fdfe; 
-  width: 1440px;
-  height: 80px;
+    background: #f7fdfe;
+    display: flex;
+    justify-content: space-around;
+    background: #f7fdfe;
+    height: 80px;
 }
+
 .logo {
-  font-size: 30.114px;
-  font-family: "Museo_Sans_700";
-  color: rgb(130, 134, 143);
-  text-transform: uppercase;
-  line-height: 80px;
-  text-align: center;
-  width: 100px;
-  height: 80px;
-  margin-left: 245px;
-  margin-right: 470px;
-  float: left;
+    font-size: 30.114px;
+    font-family: "museo_sans_cyrl700";
+    color: rgb(130, 134, 143);
+    text-transform: uppercase;
+    line-height: 80px;
+    text-align: center;
+    width: 100px;
+    height: 80px;
 }
-.header ul {
-  margin: 0 auto;
-}
+
 .header li {
-  font-size: 14.053px;
-  font-family: "Museo_Sans_700";
-  color: rgb(130, 134, 143);
-  text-transform: uppercase;
-  line-height: 80px;
-  text-align: center;
-  float: left;
-  list-style-type: none;
-  width: 85px;
-  height: 80px;
+    font-size: 14.053px;
+    font-family: "museo_sans_cyrl700";
+    color: #82868FFF;
+    text-transform: uppercase;
+    line-height: 80px;
+    text-align: center;
+    float: left;
+    list-style-type: none;
+    width: 85px;
+    height: 80px;
+    transition: .6s;
 }
+
 .header li:hover {
-  text-decoration: underline; 
-  cursor:help;
+    cursor: pointer;
+    color: #0ebfdd;
+    transform: scale3d(1.1, 1.7, 5);
 }
+
 #sigh_in {
-  float: left;
-  background: #0ebfdd;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 125px;
-  height: 40px;
-  margin-left: 10px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border-radius: 50px;
+    float: left;
+    background: #0ebfdd;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 125px;
+    height: 40px;
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 50px;
 }
+
 #sigh_in a {
-  font-size: 12.833px;
-  font-family: "Museo_Sans_700";
-  color: rgb(247, 253, 254);
-  text-transform: uppercase;
-  text-align: center;
-  width: 125px;
-  line-height: 40px;
-  text-decoration: none;
-  float: left;
+    font-size: 12.833px;
+    font-family: "museo_sans_cyrl700";
+    color: rgb(247, 253, 254);
+    text-transform: uppercase;
+    text-align: center;
+    width: 125px;
+    line-height: 40px;
+    text-decoration: none;
+    float: left;
 }
+
 .our_mission {
-  background: url("images/our_mission_bg.jpg"); 
-  width: 1440px;
-  height: 600px;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  margin: 0 auto;
+    background: url("../images/our_mission_bg.jpg");
+    width: 100%;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    margin: 0 auto;
 }
+
 .our_mission h1 {
-  font-size: 44.024px;
-  font-family: "Avenir-85-Heavy";
-  color: rgb(247, 253, 254);
-  line-height: 0.636;
-  text-align: center;
-  margin: 0 auto;
-  padding-top: 403px;
+    font-size: 44.024px;
+    font-family: "avenir_heavy";
+    color: rgb(247, 253, 254);
+    line-height: 0.636;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 403px;
 }
+
 .our_mission i {
-  font-size: 10px;
-  line-height: 33px;
-  vertical-align: top;
-  margin-left: 10px;
-  margin-right: 10px;
+    font-size: 10px;
+    line-height: 33px;
+    vertical-align: top;
+    margin-left: 10px;
+    margin-right: 10px;
 }
+
 .our_mission p {
-  font-size: 20.01px;
-  font-family: "Avenir-85-Heavy";
-  color: rgb(247, 253, 254);
-  line-height: 1.4;
-  text-align: center;
-  width: 840px;
-  margin: 0 auto;
-  padding-top: 28px;
+    font-size: 20.01px;
+    font-family: "avenir_heavy";
+    color: rgb(247, 253, 254);
+    line-height: 1.4;
+    text-align: center;
+    width: 840px;
+    margin: 0 auto;
+    padding-top: 28px;
 }
+
 .about {
-  background: #fff; 
-  width: 1440px;
-  height: 250px;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  margin: 0 auto;
+    background: #fff;
+    width: 100%;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    margin: 0 auto;
 }
+
 .about h1 {
-  font-size: 44.024px;
-  font-family: "Avenir-85-Heavy";
-  color: rgb(14, 191, 221);
-  line-height: 0.636;
-  text-align: center;
-  width: 127px;
-  height: 35px;
-  margin: 0 auto;
-  padding-top: 60px;
+    font-size: 44.024px;
+    font-family: "avenir_heavy";
+    color: rgb(14, 191, 221);
+    line-height: 0.636;
+    text-align: center;
+    width: 127px;
+    height: 35px;
+    margin: 0 auto;
+    padding-top: 60px;
 }
+
 .about p {
-  font-size: 20.01px;
-  font-family: "Avenir-85-Heavy";
-  color: rgb(69, 73, 77);
-  line-height: 1.4;
-  width: 840px;
-  height: 48px;
-  margin: 0 auto;
-  padding-top: 28px;
-  text-align: center;
+    font-size: 20.01px;
+    font-family: "avenir_heavy";
+    color: rgb(69, 73, 77);
+    line-height: 1.4;
+    width: 840px;
+    height: 48px;
+    margin: 0 auto;
+    padding-top: 28px;
+    text-align: center;
 }
+
 .team {
-  background: #0ebfdd; 
-  width: 1440px;
-  height: 600px;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  margin: 0 auto;
+    background: #0ebfdd;
+    width: 100%;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    margin: 0 auto;
 }
-.team h1 {
-  font-size: 44.024px;
-  font-family: "Avenir-85-Heavy";
-  color: rgb(255, 255, 255);
-  line-height: 0.636;
-  text-align: center;
-  margin: 0 auto;
-  padding-top: 60px;
-}
-.team p {
-  font-size: 18px;
-  font-family: "Avenir-85-Heavy";
-  font-weight: bold;
-  font-style: italic;
-  color: rgb(247, 253, 254);
-  line-height: 1.2;
-  text-align: center;
-  width: 150px;
-  height: 48px;
-  margin: 0 auto;
-}
-.team ul {
-  margin: 100px 390px 90px 390px;
-  padding: 0px;
-  min-width: 660px;
-}
-.team li {
-  font-size: 18px;
-  font-family: "Avenir-85-Heavy";
-  color: rgb(247, 253, 254);
-  line-height: 1.2;
-  list-style-type: none;
-  float: left;
-  text-align: center;
-  margin-left: 33px;
-  margin-right: 33px;
-}
-.foto1 {
-  margin-bottom: 10px;
-  width: 150px;
-  height: 150px;
-  background: url("images/foto1.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 150px;
-}
-.foto2 {
-  margin-bottom: 10px;
-  width: 150px;
-  height: 150px;
-  background: url("images/foto2.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 150px;
-}
-.foto3 {
-  margin-bottom: 10px;
-  width: 150px;
-  height: 150px;
-  background: url("images/foto3.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 150px;
-}
+
+.team h1,
+.team p,
+.team ul,
 .team a {
-  font-size: 12.833px;
-  font-family: "Museo_Sans_700";
-  color: rgb(247, 253, 254);
-  text-transform: uppercase;
-  text-align: center;
-  width: 175px;
-  line-height: 40px;
-  text-decoration: none;
-  float: left;
-  border: 1px solid;
-  border-radius: 50px;
-  margin-left: 631px;
-  margin-right: 631px;
-  margin-top: 90px;
+    display: flex;
+    justify-content: center;
 }
+
+.team h1 {
+    font-size: 44.024px;
+    font-family: "avenir_heavy";
+    color: rgb(255, 255, 255);
+    line-height: 0.636;
+    padding-top: 60px;
+}
+
+.team p {
+    font-size: 18px;
+    font-family: "avenir_heavy";
+    font-weight: bold;
+    font-style: italic;
+    color: rgb(247, 253, 254);
+    line-height: 1.2;
+    text-align: center;
+    width: 150px;
+    margin: 0 auto;
+}
+
+.team ul {
+    margin: 100px 0;
+    min-width: 660px;
+}
+
+.team li {
+    font-size: 18px;
+    font-family: "avenir_heavy";
+    color: rgb(247, 253, 254);
+    line-height: 1.2;
+    list-style-type: none;
+    float: left;
+    text-align: center;
+    margin-left: 33px;
+    margin-right: 33px;
+}
+
+.foto1 {
+    margin-bottom: 10px;
+    width: 150px;
+    height: 150px;
+    background: url("../images/foto1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 150px;
+}
+
+.foto2 {
+    margin-bottom: 10px;
+    width: 150px;
+    height: 150px;
+    background: url("../images/foto2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 150px;
+}
+
+.foto3 {
+    margin-bottom: 10px;
+    width: 150px;
+    height: 150px;
+    background: url("../images/foto3.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 150px;
+}
+
+.team a {
+    font-size: 12.833px;
+    font-family: "museo_sans_cyrl700";
+    color: rgb(247, 253, 254);
+    text-transform: uppercase;
+    text-align: center;
+    width: 175px;
+    line-height: 40px;
+    text-decoration: none;
+    border: 1px solid;
+    border-radius: 50px;
+    margin: 0 auto;
+}
+
+.team a:hover {
+    color: #5a5e62;
+}
+
 #map_canvas {
-  width:1440px; 
-  height:600px;
+    width: 100%;
+    height: 600px;
 }
+
 #contentString {
-  background: #000;
-  color: blue;
+    background: #000;
+    color: blue;
 }
-.firstHeading  {
-  margin-left: 15px;
-  margin-bottom: 3px;
-  font-size: 15px;
-  color: #fff;
+
+.firstHeading {
+    margin-left: 15px;
+    margin-bottom: 3px;
+    font-size: 15px;
+    color: #fff;
 }
+
 #bodyContent p {
-  margin: 0 auto;
-  padding-left: 15px;
-  padding-bottom: 5px;
-  font-size: 13px;
-  color: #787e84;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-bottom: 5px;
+    font-size: 13px;
+    color: #787e84;
 }
+
 .footer {
-  width: 1440px;
-  height: 120px;
-  background: #45494d;
+    width: 100%;
+    height: 120px;
+    background: #45494d;
 }
+
 .footer_content {
-  width: 940px;
-  margin: 0 auto;
+    width: 940px;
+    margin: 0 auto;
 }
+
 .footer ul {
-  margin: 0 auto;
+    margin: 0 auto;
 }
+
 .footer_content ul {
-  padding-left: 0px;
+    padding-left: 0px;
 }
+
 .footer_content li {
-  float: left;
-  list-style-type: none;
-  height: 80px;
-  margin-right: 30px;
+    float: left;
+    list-style-type: none;
+    height: 80px;
+    margin-right: 30px;
 }
+
 .footer_content a {
-  font-size: 12.053px;
-  font-family: "Museo_Sans_500";
-  color: rgb(215, 222, 228);
-  text-transform: uppercase;
-  line-height: 80px;
-  text-align: center;
-  text-decoration: none;
+    font-size: 12.053px;
+    font-family: "museo_sans500";
+    color: rgb(215, 222, 228);
+    text-transform: uppercase;
+    line-height: 80px;
+    text-align: center;
+    text-decoration: none;
 }
-.footer_content a:hover {
-  color: #40a0ff;
-  transition: 1.5s;
-}
+
 .footer_content hr {
-  width: 940px;
-  color: #5a5e62;
+    width: 940px;
+    color: #5a5e62;
 }
+
 .link_mail {
-  float: right;
-  margin-left: 0px;
-  margin-top: 21.5px;
+    float: right;
+    margin-left: 0px;
+    margin-top: 21.5px;
 }
+
 .link_mail a {
-  content: url("images/link_mail.png");
-  width: 43px;
-  height: 42px;
+    content: url("../images/link_mail.png");
+    width: 43px;
+    height: 42px;
 }
+
 .link_facebook {
-  float: right;
-  margin-left: 8px;
-  margin-top: 21.5px;
+    float: right;
+    margin-left: 8px;
+    margin-top: 21.5px;
 }
+
 .link_facebook a {
-  content: url("images/link_facebook.png");
-  width: 43px;
-  height: 42px;
+    content: url("../images/link_facebook.png");
+    width: 43px;
+    height: 42px;
 }
+
 .link_twitter {
-  float: right;
-  margin-left: 8px;
-  margin-top: 21.5px;
+    float: right;
+    margin-left: 8px;
+    margin-top: 21.5px;
 }
+
 .link_twitter a {
-  content: url("images/link_twitter.png");
-  width: 43px;
-  height: 42px;
+    content: url("../images/link_twitter.png");
+    width: 43px;
+    height: 42px;
 }
+
 .additional_info {
-  width: 940px;
-  margin: 0 auto;
-  text-align: right;
+    width: 940px;
+    margin: 0 auto;
+    text-align: right;
 }
+
 .additional_info a {
-  margin-left: 12px;
-  float: right;
-  font-size: 12.046px;
-  font-family: "Museo_Sans_500";
-  color: rgb(115, 118, 122);
-  line-height: 1.2;
-  text-align: left;
-  text-decoration: none;
+    margin-left: 12px;
+    float: right;
+    font-size: 12.046px;
+    font-family: "museo_sans500";
+    color: rgb(115, 118, 122);
+    line-height: 1.2;
+    text-align: left;
+    text-decoration: none;
 }
+
 .additional_info a:hover {
-  color: #fff;
-  transition: 1s;
+    color: #fff;
+    transition: 1s;
 }
+
 .additional_info h6 {
-  padding-left: 12px;
-  margin: 0 auto;
-  float: right;
-  font-size: 12.046px;
-  font-family: "Museo_Sans_500";
-  color: rgb(115, 118, 122);
-  line-height: 1.2;
-  text-align: left;
+    padding-left: 12px;
+    margin: 0 auto;
+    float: right;
+    font-size: 12.046px;
+    font-family: "museo_sans500";
+    color: rgb(115, 118, 122);
+    line-height: 1.2;
+    text-align: left;
 }
+
 .additional_info span {
 
+}
+
+a {
+    text-decoration: none;
+    transition: .3s linear;
+}
+
+a:hover {
+    transform: scale(1.1);
+    color: #0ebfdd;
 }
